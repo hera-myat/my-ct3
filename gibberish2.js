@@ -1,4 +1,3 @@
-// Original English text
 const englishText = `
     NAME : CT3<br>
     BIRTH-DATE : 2000 BC<br>
@@ -11,7 +10,6 @@ const englishText = `
     UNFAV-FOOD : FISH<br>
 `;
 
-// Gibberish text
 const gibberishText = `
     Na-Mal : CT3<br>
     Mway-Ya : [NULL][ENDOFTEXT]-[NULL][ENDOFTEXT]-[SPACE][NULL][ENDOFTEXT]<br>
@@ -26,25 +24,21 @@ const gibberishText = `
     defav-food : NGAAAAA<br>
 `;
 
-// Initially set text to gibberish
 let isGibberish = true;
-const introText = document.getElementById('intro-text');
+const introText = document.getElementById('index-text');
 introText.innerHTML = gibberishText; 
 
-// Function to toggle between gibberish and English text
 function toggleTranslation() {
     const button = document.getElementById('translate-btn');
     
-    // Toggle text between gibberish and English
     if (isGibberish) {
         introText.innerHTML = englishText;
-        button.innerHTML = 'De-Translate'; // Button text change when translated
+        button.innerHTML = 'De-Translate'; 
     } else {
         introText.innerHTML = gibberishText;
-        button.innerHTML = 'Translate'; // Button text change when gibberish
+        button.innerHTML = 'Translate'; 
     }
 
-    // Toggle the state to track the current text state
     isGibberish = !isGibberish;
     button.style.transition = 'background 0.3s ease, transform 0.2s ease'; 
 }

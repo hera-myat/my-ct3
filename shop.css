@@ -1,13 +1,12 @@
-/* Prevent text selection and dragging */
 body, html {
     margin: 0;
     padding: 0;
     font-family: 'Press Start 2P', cursive;
     color: #39FF14;
-    user-select: none; /* Disable text selection */
-    -webkit-user-select: none; /* For Safari */
-    -ms-user-select: none; /* For Internet Explorer */
-    -moz-user-select: none; /* For Firefox */
+    user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    -moz-user-select: none;
 }
 
 body {
@@ -29,7 +28,6 @@ nav a:hover, .click-caption:hover, .logo a:hover, .introduction:hover, .alien-co
     animation: gradientEffect 3s infinite; 
 }
 
-/* Typing effect */
 @keyframes typing {
     from {
         width: 0;
@@ -39,7 +37,6 @@ nav a:hover, .click-caption:hover, .logo a:hover, .introduction:hover, .alien-co
     }
 }
 
-/* Blink cursor effect */
 @keyframes blink-caret {
     50% {
         border-color: transparent;
@@ -121,7 +118,6 @@ nav {
     z-index: 1;
 }
 
-/* Shop Content */
 .shop-container {
     text-align: center;
     padding: 50px;
@@ -133,7 +129,6 @@ nav {
     margin-bottom: 30px;
 }
 
-/* Email Subscription Pop-up */
 #email-popup {
     display: flex;
     position: fixed;
@@ -181,7 +176,6 @@ nav {
     background-color: #45a049;
 }
 
-/* Close button for email popup */
 #close-email-popup {
     position: absolute;
     top: 10px;
@@ -190,7 +184,6 @@ nav {
     cursor: pointer;
 }
 
-/* Product Grid */
 .product-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -245,7 +238,6 @@ nav {
     background-color: #28a745;
 }
 
-/* Cart Button */
 .cart-button {
     position: fixed;
     bottom: 20px;
@@ -267,7 +259,6 @@ nav {
     background-color: #28a745;
 }
 
-/* Popup styles */
 .popup {
     display: none;
     position: fixed;
@@ -315,7 +306,6 @@ nav {
     cursor: pointer;
 }
 
-/* DONE Button */
 #done-btn {
     padding: 10px 20px;
     background-color: #39FF14;
@@ -332,7 +322,6 @@ nav {
     background-color: red;
 }
 
-/* Clear Button */
 #clear-cart {
     padding: 10px 20px;
     background-color: #39FF14;

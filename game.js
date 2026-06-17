@@ -12,7 +12,6 @@ let ufoSpeed = 5;
 let gameOver = false;
 let isPaused = false;
 
-// Buttons
 const pauseButton = document.getElementById("pauseButton");
 const continueButton = document.getElementById("continueButton");
 
@@ -21,7 +20,6 @@ ufoImg.src = 'media/ufo.png';
 const spacecraftImg = new Image();
 spacecraftImg.src = 'media/spacecraft.png'; 
 
-// UFO class
 class UFO {
   constructor() {
     this.x = canvas.width / 2 - 25;
@@ -45,7 +43,6 @@ class UFO {
   }
 }
 
-// Spacecraft class
 class Spacecraft {
   constructor(x, y) {
     this.x = x;
@@ -63,7 +60,6 @@ class Spacecraft {
   }
 }
 
-// Game functions
 function createSpacecraft() {
   const x = Math.random() * (canvas.width - 40);
   spacecrafts.push(new Spacecraft(x, 0));
@@ -76,35 +72,30 @@ function drawGame() {
 
   ufo.draw();
 
-  // Draw spacecrafts and update positions
   spacecrafts.forEach((spacecraft, index) => {
     spacecraft.update();
     spacecraft.draw();
 
-    // Check for collision with UFO
     if (
       spacecraft.x < ufo.x + ufo.width &&
       spacecraft.x + spacecraft.width > ufo.x &&
       spacecraft.y < ufo.y + ufo.height &&
       spacecraft.y + spacecraft.height > ufo.y
     ) {
-      endGame(); // End the game on collision
+      endGame(); 
       return;
     }
 
-    // Remove off-screen spacecrafts
     if (spacecraft.y > canvas.height) {
       spacecrafts.splice(index, 1);
       score++; 
 
-      // Increase difficulty after score 10
       if (score === 10) {
         alienSpeed += 2; 
       }
     }
   });
 
-  // Update score
   document.getElementById("score").textContent = score;
 }
 
@@ -119,18 +110,15 @@ function drawGameOverScreen() {
   ctx.fillStyle = "black";
   ctx.fillRect(0, 0, canvas.width, canvas.height);
 
-  // Display Game Over text
   ctx.fillStyle = "red";
   ctx.font = "48px 'Press Start 2P', sans-serif";
   ctx.textAlign = "center";
   ctx.fillText("GAME OVER", canvas.width / 2, canvas.height / 2 - 20);
 
-  // Display final score
   ctx.fillStyle = "white";
   ctx.font = "24px 'Press Start 2P', sans-serif";
   ctx.fillText(`FINAL SCORE: ${score}`, canvas.width / 2, canvas.height / 2 + 20);
 
-  // Restart instructions
   ctx.fillStyle = "yellow";
   ctx.font = "16px 'Press Start 2P', sans-serif";
   ctx.fillText("PRESS R TO RESTART", canvas.width / 2, canvas.height / 2 + 60);
@@ -145,11 +133,9 @@ function startGame() {
   isPaused = false;
   document.getElementById("score").textContent = score;
 
-  // Reset buttons
   pauseButton.disabled = false;
   continueButton.disabled = true;
 
-  // Create spacecrafts every 2 seconds
   setInterval(createSpacecraft, 2000);
 
   gameInterval = setInterval(() => {
@@ -160,7 +146,6 @@ function startGame() {
   }, 1000 / 60); 
 }
 
-// Handle key events for UFO movement and restart
 let left = false;
 let right = false;
 
@@ -187,7 +172,6 @@ document.addEventListener("keyup", (e) => {
   }
 });
 
-// Pause and Continue button logic
 pauseButton.addEventListener("click", () => {
   isPaused = true;
   pauseButton.disabled = true;
@@ -200,7 +184,6 @@ continueButton.addEventListener("click", () => {
   continueButton.disabled = true;
 });
 
-// Update UFO position on each frame
 function moveUFO() {
   ufo.move(left, right);
 }

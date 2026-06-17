@@ -1,4 +1,3 @@
-// Typing Effect Script
 const headerText = "I am CT3, welcome to my vlog page, explore a day in a life of an alien on Earth.";
 let j = 0;
 

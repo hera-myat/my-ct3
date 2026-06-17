@@ -1,13 +1,12 @@
-/* Prevent text selection and dragging */
 body, html {
     margin: 0;
     padding: 0;
     font-family: 'Press Start 2P', cursive;
     color: #39FF14;
-    user-select: none; /* Disable text selection */
-    -webkit-user-select: none; /* For Safari */
-    -ms-user-select: none; /* For Internet Explorer */
-    -moz-user-select: none; /* For Firefox */
+    user-select: none; 
+    -webkit-user-select: none; 
+    -ms-user-select: none; 
+    -moz-user-select: none; 
 }
 
 body {

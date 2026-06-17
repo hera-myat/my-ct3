@@ -12,7 +12,6 @@ function setup() {
 function draw() {
     background(0, 0, 0, 25);
     
-    // Draw stars
     for (let star of stars) {
         star.show();
         star.update();

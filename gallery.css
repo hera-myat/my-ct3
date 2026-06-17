@@ -4,16 +4,15 @@
     box-sizing: border-box;
 }
 
-/* Prevent text selection and dragging */
 body, html {
     margin: 0;
     padding: 0;
     font-family: 'Press Start 2P', cursive; 
     color: #C0C0C0;
-    user-select: none; /* Disable text selection */
-    -webkit-user-select: none; /* For Safari */
-    -ms-user-select: none; /* For Internet Explorer */
-    -moz-user-select: none; /* For Firefox */
+    user-select: none; 
+    -webkit-user-select: none; 
+    -ms-user-select: none; 
+    -moz-user-select: none;
     background: black; 
     overflow-y: auto; 
     height: auto;
@@ -53,7 +52,6 @@ p {
     animation: metallic-shift 5s infinite alternate; 
 }
 
-/* Styling for the "Go Back" button */
 .go-back-btn {
     position: absolute;
     top: 20px;
@@ -73,7 +71,6 @@ p {
     background-color: #555;
 }
 
-/* Styling for the gallery */
 .gallery {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -103,7 +100,6 @@ p {
     height: 400px; 
 }
 
-/* Footer styles */
 footer {
     text-align: center;
     margin-top: 40px;
@@ -112,21 +108,20 @@ footer {
     animation: metallic-shift 5s infinite alternate;
 }
 
-/* Metallic text color animation */
 @keyframes metallic-shift {
     0% {
-        color: #C0C0C0; /* Light silver */
+        color: #C0C0C0; 
     }
     25% {
-        color: #A0A0A0; /* Darker silver */
+        color: #A0A0A0; 
     }
     50% {
-        color: #B0B0B0; /* Medium silver */
+        color: #B0B0B0; 
     }
     75% {
-        color: #D0D0D0; /* Lighter silver */
+        color: #D0D0D0; 
     }
     100% {
-        color: #C0C0C0; /* Return to light silver */
+        color: #C0C0C0;
     }
 }

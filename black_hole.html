@@ -20,12 +20,11 @@
             background(0);
             for (let i = 0; i < particles.length; i++) {
                 let p = particles[i];
-                p.applyForce(createVector(0.5, 0)); // Gravity effect
+                p.applyForce(createVector(0.5, 0)); 
                 p.update();
                 p.show();
             }
 
-            // Draw the black hole
             fill(0);
             noStroke();
             ellipse(blackHole.x, blackHole.y, 40, 40);

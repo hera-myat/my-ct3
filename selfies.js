@@ -23,13 +23,11 @@ function setup() {
 function draw() {
     background(0, 0, 20); 
 
-    // Draw and update stars
     for (let star of stars) {
         star.update();
         star.show();
     }
 
-    // Draw and update shooting stars
     for (let i = shootingStars.length - 1; i >= 0; i--) {
         let shootingStar = shootingStars[i];
         shootingStar.update();
@@ -64,15 +62,12 @@ class Star {
         fill(255); 
         noStroke();
 
-        // Calculate the 2D position of the star based on its depth
         let sx = map(this.x / this.z, 0, 1, 0, width);
         let sy = map(this.y / this.z, 0, 1, 0, height);
 
-        // Map the size based on its depth 
         let r = map(this.z, 0, width, 8, 0);
         ellipse(sx, sy, r, r);
 
-        // Draw a line connecting to its previous position to create a tail effect
         let px = map(this.x / this.pz, 0, 1, 0, width);
         let py = map(this.y / this.pz, 0, 1, 0, height);
 
