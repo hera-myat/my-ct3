@@ -1,4 +1,4 @@
-# 💜 🛸 💚 MYCT3 💚 🛸 💜
+# -------- 💜 🛸 💚 MYCT3 💚 🛸 💜 --------
 
 A futuristic and artistic website that blends personal storytelling with humorous graphics, highlighting skills in creative coding and web development. This website was developed as a final project for the Introduction to Creative Coding class.
 
