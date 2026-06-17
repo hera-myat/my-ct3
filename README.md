@@ -4,6 +4,7 @@ A futuristic and artistic website that blends personal storytelling with humorou
 
 <br>
 This is a very interactive website, so ready to click through and explore the art of coding. 
+
 <br>
 
 👽 **Check it out HERE**: [MYCT3](hera-myat.github.io/my-ct3/) 👽
