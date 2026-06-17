@@ -9,4 +9,4 @@ A futuristic and artistic website that blends personal storytelling with humorou
 👽 **Check it out HERE**: [MYCT3](hera-myat.github.io/my-ct3/)
 
 ![Screenshot](media/Screenshot%202026-06-17%20at%2014.32.26.png)
-![Screenshot](media/Screenshot%2026-06-17%at%14.33.33.png)
+![Screenshot](media/Screenshot%202026-06-17%20at%2014.33.33.png)
