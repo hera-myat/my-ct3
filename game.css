@@ -1,0 +1,101 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-image: url('media/gamebg1.png');
+  background-size: cover;
+  background-position: center; 
+  background-repeat: no-repeat;
+  height: 100vh; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-family: 'Press Start 2P', cursive;
+}
+
+#game-container {
+  text-align: center;
+}
+
+h1 {
+  color: #FF1900;
+  font-size: 3em;
+  margin-bottom: 20px;
+}
+
+p {
+    text-align: center;
+    font-size: 15px; 
+    margin-bottom: 10px;
+    color: #C0C0C0; 
+    animation: metallic-shift 5s infinite alternate;
+}
+
+#game-screen {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  width: 600px;
+  height: 400px;
+  margin: 20px auto;
+  border: 2px solid #fff;
+}
+
+#score-board {
+  margin-top: 20px;
+  font-size: 1.5em;
+  color: white;
+}
+
+#controls {
+  display: flex;
+  justify-content: center;
+  margin-top: 60px;
+}
+
+#controls button {
+  margin: 0 10px;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-family: 'Press Start 2P', sans-serif;
+  background-color: #333;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+#controls button:disabled {
+  background-color: #777;
+  cursor: not-allowed;
+}
+
+#controls button:hover:not(:disabled) {
+  background-color: #555;
+}
+
+#goBackButton {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+
+#backButton {
+  padding: 8px 16px;
+  font-size: 14px;
+  font-family: 'Press Start 2P', sans-serif;
+  background-color: #444;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+#backButton:hover {
+  background-color: #666;
+}
